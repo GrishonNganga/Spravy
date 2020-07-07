@@ -1,5 +1,8 @@
 {% extends 'bootstrap/base.html' %}
-
+{% block head%}
+<link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+{% endblock %}
 {% block navbar %}
     <div class="nav">
         {% include 'navbar.html' %}
