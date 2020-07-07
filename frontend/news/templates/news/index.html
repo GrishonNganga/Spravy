@@ -2,11 +2,29 @@
 
 {% block head %}
 {{super()}}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
 {% endblock %}
 
 {% block content %}
-<div class="content">
-    This is index
+<div class="top nav-text">
+    &nbsp;&nbsp;&nbsp; Home
+</div>
+<div class=" content">
+    {% for source in sources %}
+        <a href="{{source.url}}" class="source-link">
+            <div class="card sources">
+                <div class="sources-section-one">
+                    <span class="source-title">&nbsp;&nbsp;&nbsp;&nbsp; {{source.title}}</span>
+                </div>
+                <div class="sources-section-two">
+                    <span class="source-description">{{source.description}}</span>
+                </div>
+                <div class="sources-section-three">
+                    <span class="label label-success source-category">{{source.categories}}</span> 
+                </div>
+            </div>
+        </a>
+    {% endfor %}
 </div>
 {% endblock %}

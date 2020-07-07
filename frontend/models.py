@@ -27,3 +27,11 @@ class Article:
         return self.publish_date
     
 
+class Source:
+    def __init__(self, title, description, url, categories):
+        self.title = title
+        self.description = description
+        self.url = url
+        self.categories = categories
+
+    

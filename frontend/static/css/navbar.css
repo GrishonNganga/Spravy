@@ -17,8 +17,9 @@ a:visited{
 }
 .nav-links li{
     margin-left: 5%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
     font-size: 20px;
     font-weight: bold;
     vertical-align: center;
@@ -32,7 +33,7 @@ nav{
 }
 .home:hover, .categories:hover, .trending:hover, .nav-links li:hover, .nav-link-img:hover{
     color: #41cf25;
-    background-color: #d6ffc7;
+    background-color: #e5ffce;
 }
 .fa-home{
     color: black;

@@ -1,5 +1,5 @@
 import urllib, json
-from .models import Article
+from .models import Article, Source
 
 
 def configure_request(app):
@@ -18,7 +18,29 @@ def get_trending_articles():
 
     return trending_articles_list
 
+def get_sources():
+    sources_endpoint = news_base_url.format('sources', '', news_api_key)
+    with urllib.request.urlopen(sources_endpoint)as url:
+        sources = url.read()
+        sources = json.loads(sources)
+
+        sources = sources['sources']
+        sources_list = process_sources(sources)
+
+    return sources_list
     
+def process_sources(sources_list):
+    sources_list_object = []
+    for source in sources_list:
+        a_source = Source(source['name'], source['description'], source['url'], source['category'])
+        sources_list_object.append(a_source)
+
+    return sources_list_object
+
+
+
+
+
 def process_articles(articles_list):
     articles_list_object = []
     for article in articles_list:
@@ -29,5 +51,3 @@ def process_articles(articles_list):
         articles_list_object.append(an_article)
 
     return articles_list_object
-
-    
