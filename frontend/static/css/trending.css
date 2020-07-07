@@ -1,0 +1,86 @@
+.top{
+    margin-left: 20%;
+    margin-right: 30%;
+    border-left: solid 1px lightgray;
+    border-right: solid 1px lightgray;
+    border-bottom: solid 1px lightgray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 50%;
+    background-color: white;
+}
+.content{
+    margin-left: 20%;
+    margin-right: 30%;
+    margin-top: 3%;
+}
+.nav-text{
+    font-size: 20px;
+    font-weight: bold;
+    color: #41cf25;
+}
+.news{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.news:hover{
+    background-color: #f5f3f1;
+    z-index: 5;
+}
+.news-section-one{
+    flex: 0 0 100%;
+    padding-top: 15px;
+    padding-left: 15px;
+    
+}
+.news-section-two{
+    flex: 0 0 30%;
+}
+.news-section-two img{
+    width: 100%;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    margin-top: -14%;
+}
+.news-section-three{
+    flex: 0 0 70%;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.news-section-four{
+    flex: 0 0 30;
+    padding-top: 15px;
+    padding-left: 15px;
+    margin-right: 5%;
+}
+.news-section-five{
+    flex: 0 0 30;
+    padding-top: 15px;
+}
+.news-title{
+    font-size: 15px;
+    font-weight: bold;
+}
+.news-description{
+    color: gray;
+}
+.news-source, .news-date{
+    font-size: 13px;
+}
+
+.trending{
+    color: #41cf25;
+}
+.home, .categories{
+    color: black;
+}
+.news-link:hover .news-link:visited{
+    color: initial;
+    text-decoration: none;
+    
+}

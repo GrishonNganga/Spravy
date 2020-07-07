@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block head %}
+{{super()}}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+<link rel="stylesheet" href="{{url_for('static', filename='css/trending.css')}}">
+{% endblock %}
+{% block content %}
+
+<div class="top nav-text">
+    &nbsp;&nbsp;&nbsp; Trending
+</div>
+<div class=" content">
+    {% if articles %}
+        {% for article in articles %}
+            <a href="{{article.link}}" class="news-link">
+                <div class="card news">
+                    <div class="news-section-one">
+                        <p class="news-title">{{article.title}}</p>
+                    </div>
+                    <div class="news-section-three">
+                        <span class="news-description">{{article.description}}</span>
+                    </div>
+                    <div class="news-section-two">
+                        <img src="{{article.image}}" alt="Article image">
+                    </div>
+                    <div class="news-section-four">
+                        <span class="news-source">{{article.source}}</span> 
+                    </div>
+                    <div class="news-section-five">
+                        <span class="news-date" >{{article.publish_date}}</span>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    {% endif %}
+</div>
+
+{% endblock %}

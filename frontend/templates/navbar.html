@@ -1,0 +1,19 @@
+{% block head %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/navbar.css')}}">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+{% endblock %}
+<nav>
+    <ul class="nav-links">
+        <div>
+            <a href="/"><li class="home"><i class="nav-link-img material-icons home">home</i>   Home</li></a>
+        </div>
+        <div>
+            <a href="/trending"><li class="trending"><i class=" nav-link-img material-icons trending">trending_up</i>   Trending</li></a>
+        </div>
+        <div>
+            <a href="/categories"><li class="categories"><i class="nav-link-img material-icons categories">category</i>   Categories</li></a>
+        </div>
+        
+    </ul>
+</nav>
