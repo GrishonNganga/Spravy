@@ -32,13 +32,21 @@ def get_sources():
 def process_sources(sources_list):
     sources_list_object = []
     for source in sources_list:
-        a_source = Source(source['name'], source['description'], source['url'], source['category'])
+        a_source = Source(source['id'] ,source['name'], source['description'], source['url'], source['category'])
         sources_list_object.append(a_source)
 
     return sources_list_object
 
+def get_source_articles(source):
+    source_endpoint = news_base_url.format('everything', 'sources={}'.format(source), news_api_key )
 
+    with urllib.request.urlopen(source_endpoint)as url:
+        source_articles = url.read()
+        source_articles = json.loads(source_articles)
+        source_articles = source_articles['articles']
+        source_articles_object = process_articles(source_articles)
 
+    return source_articles_object
 
 
 def process_articles(articles_list):
@@ -47,7 +55,7 @@ def process_articles(articles_list):
         article_title = article['title']
         if len(article_title) > 65:
             article_title = article_title[:65] + '...'
-        an_article = Article(article['url'], article_title, article['description'], article['urlToImage'], article['source']['name'], article['publishedAt'])
+        an_article = Article(article['source']['id'], article['url'], article_title, article['description'], article['urlToImage'], article['source']['name'], article['publishedAt'])
         articles_list_object.append(an_article)
 
     return articles_list_object
