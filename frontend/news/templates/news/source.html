@@ -4,6 +4,13 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 <link rel="stylesheet" href="{{url_for('static', filename='css/source.css')}}">
 <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
+<!-- 
+{% if articles %}
+<title>Spravy / {{articles[0].source}}</title>
+{% else %}
+<title>Spravy / Articles</title>
+{% endif %} -->
+<title>Spravy Articles</title>
 
 {% endblock %}
 {% block content %}
