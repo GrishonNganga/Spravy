@@ -3,7 +3,7 @@ body{
 }
 .nav-links{
     list-style-type: none;
-    width: 10%;
+    width: 12%;
     padding-left: 0%;
     position: fixed;
 }
@@ -40,13 +40,10 @@ nav{
     padding-top: 5px;
     font-size: 30px;
 }
-.home:hover, .categories:hover, .trending:hover, .nav-link-img:hover{
+/* .home:hover, .categories:hover, .trending:hover, .nav-link-img:hover{
     color: #41cf25;
     background-color: #e5ffce;
-}
+} */
 .logo:hover, .logo img:hover{
     background-color: initial;
-}
-.fa-home{
-    color: black;
 }

@@ -21,3 +21,9 @@ def show_source():
     a_source_articles = get_source_articles(url)
     
     return render_template('news/source.html', articles = a_source_articles)
+
+@news.route('/categories')
+def show_categories():
+
+    categories = ['general', 'technology', 'business', 'sports', 'entertainment', 'science']
+    return render_template('news/categories.html',categories = categories )
