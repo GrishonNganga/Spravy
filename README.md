@@ -9,7 +9,12 @@ News aggregator that allows users to quickly and easily be in the know with reli
 Spravy pulls data from the NewsApi and organzises the news in an easy and user friendly way for users to go through.
 ## Setup/Installation Requirements
 
-Be sure to install all the requirements on the requirements.txt list.
+Clone the repo `git clone https://github.com/GrishonNganga/Spravy.git`\
+Move into the directory `cd Spravy`\
+Create a virtual environment `python -m virtual`\
+You need an API_KEY and SECRET_KEY to access the NEWSAPI.org's data. Create an account on their website if you do not have already.https://newsapi.org/register.\
+Open start.sh file and replace what's inside the <> with your api and secret keys. (API_KEY from newsapi.org)
+To run the application `./start.sh`
 ## Known Bugs
 
 There are no known bugs atm. Get in touch if you discover any.
