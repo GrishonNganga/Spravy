@@ -1,5 +1,6 @@
 # Spravy 
-#### News aggregator that allows users to quickly and eaasily be in the know with reliable and update to date news from across the globe. 
+
+News aggregator that allows users to quickly and easily be in the know with reliable and up to date news from across the globe. 
 
 #### By **Grishon Gikima**
 
